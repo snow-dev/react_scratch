@@ -1,19 +1,18 @@
-/** Created: 2019-04-11 by: snow-dev **/
-
-/** Import react section **/
 import React, {Component} from 'react';
-import Home from './components/Home/HomeContainer';
-/** Language imports **/
+import autoBind from 'react-autobind';
+import HomeContainer from './components/Home/HomeContainer';
 
-/** Import component section **/
+class App extends Component{
+  constructor(props){
+    super(props);
+    autoBind(this);
+  }
 
-/** Import helpers section **/
+  render() {
+    return (
+      <HomeContainer/>
+    );
+  }
+}
 
-/** Import resources section **/
-
-/** Import UI components **/
-
-
-export default () => {
-  return <Home name="Alligator" />;
-};
+export default HomeContainer;

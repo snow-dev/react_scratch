@@ -1,7 +1,12 @@
 
+import ReactDOM from 'react-dom';
 import React from 'react';
 import HomeContainer from './components/Home/HomeContainer';
-import ReactDOM from 'react-dom';
+import App from './App';
 
-const wrapper = document.getElementById('create-article-form');
-wrapper ? ReactDOM.render(<HomeContainer/>, wrapper) : false;
+ReactDOM.hydrate(<HomeContainer/>,
+  document.getElementById("root")
+);
+
+// const wrapper = document.getElementById('root');
+// wrapper ? ReactDOM.render(<HomeContainer/>, wrapper) : false;

@@ -11,12 +11,13 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 
-app.use(express.static('./build'));
+app.use(express.static('./dist'));
 
 app.get('/*', (req, res) => {
   const app = ReactDOMServer.renderToString(<App/>);
 
-  const indexFile = path.resolve('./build/index.html');
+  const indexFile = path.resolve('./public/index.html');
+
   fs.readFile(indexFile, 'utf8', (err, data) => {
     if (err) {
       console.error("Someting went wrong: ", err);

@@ -28,6 +28,10 @@ class HomeComponent extends Component {
     };
   }
 
+  /**
+   *
+   * @param event
+   */
   handleChange(event) {
     event.preventDefault();
     this.setState({
