@@ -1,4 +1,4 @@
-/** Created: 2019-04-09 by: snow-dev **/
+/** Created: 2019-04-10 by: snow-dev **/
 
 /** Import react section **/
 import React, {Component} from 'react';
@@ -15,7 +15,7 @@ import autoBind from 'react-autobind';
 /** Import UI components **/
 
 
-class Home extends Component {
+class HomeComponent extends Component {
 
   constructor(props) {
     super(props);
@@ -25,7 +25,9 @@ class Home extends Component {
 
   render() {
     return (
-      <h2>Hello {this.props.name}!</h2>
+      <div>
+        <h2>Home Component </h2>
+      </div>
     );
   }
 }
@@ -34,6 +36,6 @@ class Home extends Component {
  * Validate properties that component needs.
  * @type {{}}
  */
-Home.propTypes = {};
+HomeComponent.propTypes = {};
 
-export default Home;
+export default HomeComponent;
