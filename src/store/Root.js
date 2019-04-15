@@ -12,6 +12,13 @@ const store = createStore(rootReducer,
     applyMiddleware(thunkMiddleware)
   ));
 
+/**
+ * Create a Root wrapper that will provide the Store
+ * provider to wrapped elements.
+ * We separate this for allow use store on testings.
+ * @param props
+ * @returns {*}
+ */
 export default (props) => {
   return (
     <LocalizeProvider store={store}>

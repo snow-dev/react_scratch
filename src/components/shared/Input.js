@@ -17,11 +17,10 @@ const Input = ({label, text, type, id, value, handleChange}) => (
 
 
 Input.propTypes = {
-  type      : PropTypes.string.isRequired,
-  className : PropTypes.string.isRequired,
-  id        : PropTypes.string.isRequired,
-  value     : PropTypes.string.isRequired,
-  onChange  : PropTypes.func.isRequired,
+  type          : PropTypes.string.isRequired,
+  id            : PropTypes.string.isRequired,
+  value         : PropTypes.string.isRequired,
+  handleChange  : PropTypes.func.isRequired,
 };
 
 export default Input;
