@@ -42,7 +42,7 @@ class HomeComponent extends Component {
 
   render() {
     return (
-      <div>
+      <div className="home-component">
         <form id="article-form">
           <Input
             text="SEO Title"

@@ -6,10 +6,6 @@ class HomeContainer extends Component{
   constructor(props){
     super(props);
     autoBind(this);
-
-    this.state = {
-      title: '',
-    };
   }
 
   render() {
