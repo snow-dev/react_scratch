@@ -3,7 +3,9 @@ import React, {Component} from 'react';
 import autoBind from 'react-autobind';
 
 /** Import component section **/
-import HomeContainer from './components/Home/HomeContainer';
+import WorkspaceComponent from './components/shared/Workspace/WorkspaceComponent';
+import HeaderContainer from './components/shared/Header/HeaderContainer';
+import Footer from './components/shared/Footer/Footer';
 
 /** Import helpers section **/
 
@@ -11,7 +13,6 @@ import HomeContainer from './components/Home/HomeContainer';
 
 /** Import styles section **/
 import './resources/styles/App.css';
-import HeaderContainer from './components/shared/Header/HeaderContainer';
 
 class App extends Component{
   constructor(props){
@@ -23,7 +24,8 @@ class App extends Component{
     return (
       <div className="app-container">
         <HeaderContainer/>
-        <HomeContainer/>
+        <WorkspaceComponent/>
+        <Footer/>
       </div>
     );
   }

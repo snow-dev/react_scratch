@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 /** Import component section **/
-import HomeContainer from './components/Home/HomeContainer';
+import StoreContainer from './components/Store/StoreContainer';
 import App from './App';
 import Root from './store/Root';
 
@@ -24,4 +24,4 @@ ReactDOM.hydrate(
 );
 
 // const wrapper = document.getElementById('root');
-// wrapper ? ReactDOM.render(<HomeContainer/>, wrapper) : false;
+// wrapper ? ReactDOM.render(<StoreContainer/>, wrapper) : false;

@@ -2,26 +2,24 @@
 import React from 'react';
 
 /** Enzyme/Jest section imports **/
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 
 /** Components section import **/
-import HomeContainer from '../HomeContainer';
+
+import StoreComponent from '../StoreComponent';
 import Root from '../../../store/Root';
 
-describe('HomeContainer', () => {
+describe('StoreComponent', () => {
   let wrapper;
 
   /**
    * For each test, we wrap component with Root (Provider).
    */
   beforeEach(() => {
-    wrapper = mount(
-      <Root>
-        <HomeContainer/>
-      </Root>
+    wrapper = shallow(
+      <StoreComponent />
     );
   });
-
 
   afterEach(() => {
     wrapper.unmount();
@@ -30,7 +28,7 @@ describe('HomeContainer', () => {
   /**
    * After each test we unmount component, to avoid garbage on the next tests.
    */
-  it('should render a HomeComponent', () => {
-    expect(wrapper.find('HomeComponent').length).toEqual(1);
+  it('should render a div', () => {
+    expect(wrapper.find('div').length).toEqual(1);
   });
 });

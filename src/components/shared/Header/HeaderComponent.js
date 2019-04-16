@@ -27,7 +27,7 @@ class HeaderComponent extends Component {
 
   render() {
     return (
-      <div>
+      <div className="header">
         <h2>header-component </h2>
       </div>
     );

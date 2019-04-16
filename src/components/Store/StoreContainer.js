@@ -1,18 +1,16 @@
 import React, {Component} from 'react';
 import autoBind from 'react-autobind';
-import HomeComponent from './HomeComponent';
+import StoreComponent from './StoreComponent';
 
-class HomeContainer extends Component{
+class StoreContainer extends Component{
   constructor(props){
     super(props);
     autoBind(this);
   }
 
   render() {
-    return (
-      <HomeComponent/>
-    );
+    return <StoreComponent/>;
   }
 }
 
-export default HomeContainer;
+export default StoreContainer;

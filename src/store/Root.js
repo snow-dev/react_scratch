@@ -15,7 +15,7 @@ const store = createStore(rootReducer,
 /**
  * Create a Root wrapper that will provide the Store
  * provider to wrapped elements.
- * We separate this for allow use store on testings.
+ * We separate this for allow use homeStore on testings.
  * @param props
  * @returns {*}
  */

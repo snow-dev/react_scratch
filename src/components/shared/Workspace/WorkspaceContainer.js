@@ -39,7 +39,7 @@ class WorkspaceContainer extends Component {
 WorkspaceContainer.propTypes = {};
 
 /**
- * Map some parameters from store to be injected to component.
+ * Map some parameters from homeStore to be injected to component.
  * @param store
  * @returns {{}}
  */

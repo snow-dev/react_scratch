@@ -11,23 +11,25 @@ import {withLocalize} from 'react-localize-redux';
 
 /** Import helpers section **/
 import PropTypes from 'prop-types';
-import StoreContainer from '../../Store/StoreContainer';
 
 /** Import resources section **/
 
 /** Import UI components **/
 
 
-class WorkspaceComponent extends Component {
+class Footer extends Component {
+
   constructor(props) {
     super(props);
     autoBind(this);
   }
 
+
+
   render() {
     return (
-      <div className="workspace">
-        <StoreContainer/>
+      <div className="footer">
+        <h2>footer </h2>
       </div>
     );
   }
@@ -37,6 +39,6 @@ class WorkspaceComponent extends Component {
  * Validate properties that component needs.
  * @type {{}}
  */
-WorkspaceComponent.propTypes = {};
+Footer.propTypes = {};
 
-export default withLocalize(WorkspaceComponent);
+export default withLocalize(Footer);

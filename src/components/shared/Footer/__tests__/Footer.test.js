@@ -2,22 +2,20 @@
 import React from 'react';
 
 /** Enzyme/Jest section imports **/
-import {mount, shallow} from 'enzyme';
+import {mount} from 'enzyme';
+import Footer from '../Footer';
 
 /** Components section import **/
 
-import HomeComponent from '../HomeComponent';
-import Root from '../../../store/Root';
-
-describe('HomeComponent', () => {
+describe('Footer', () => {
   let wrapper;
 
   /**
    * For each test, we wrap component with Root (Provider).
    */
   beforeEach(() => {
-    wrapper = shallow(
-      <HomeComponent />
+    wrapper = mount(
+      <Footer/>
     );
   });
 
@@ -28,7 +26,7 @@ describe('HomeComponent', () => {
   /**
    * After each test we unmount component, to avoid garbage on the next tests.
    */
-  it('should render a div', () => {
-    expect(wrapper.find('div').length).toEqual(1);
+  it('should render a footer div element', () => {
+    expect(wrapper.find('.footer').length).toEqual(1);
   });
 });
