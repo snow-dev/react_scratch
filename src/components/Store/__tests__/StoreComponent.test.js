@@ -7,7 +7,6 @@ import {mount, shallow} from 'enzyme';
 /** Components section import **/
 
 import StoreComponent from '../StoreComponent';
-import Root from '../../../store/Root';
 
 describe('StoreComponent', () => {
   let wrapper;
@@ -28,7 +27,25 @@ describe('StoreComponent', () => {
   /**
    * After each test we unmount component, to avoid garbage on the next tests.
    */
-  it('should render a div', () => {
-    expect(wrapper.find('div').length).toEqual(1);
+  it('should render a store div element', () => {
+    expect(wrapper.find('.store').length).toEqual(1);
   });
+
+  it('should render a store__header div element', () => {
+    expect(wrapper.find('.store__header').length).toEqual(1);
+  });
+
+  it('should contain a store__overview element', () => {
+    expect(wrapper.find('.store__header').length).toEqual(1);
+  });
+
+  it('should constain a store__banner', () => {
+    expect(wrapper.find('.store__banner').length).toEqual(1);
+  });
+
+  it('should contain a store__promotions', () => {
+    expect(wrapper.find('.store__promotions').length).toEqual(1);
+  });
+
 });
+
