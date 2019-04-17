@@ -46,6 +46,5 @@ describe('StoreComponent', () => {
   it('should contain a store__promotions', () => {
     expect(wrapper.find('.store__promotions').length).toEqual(1);
   });
-
 });
 

@@ -3,6 +3,8 @@
 import * as loginActions from '../loginActions';
 import configureStore from 'redux-mock-store';
 
+import mockAxios from 'axios';
+
 
 const mockStore = configureStore();
 const store = mockStore();
@@ -38,3 +40,28 @@ describe('Async login function execution', () => {
     expect(store.getActions()).toEqual(expectedAction);
   });
 });
+
+describe('', () => {
+  it('should fetch data from unsplash', () => {
+
+    mockAxios.get.mockImplementationOnce(() =>
+      Promise.resolve({
+        data: [
+          {
+            id: 0,
+            name: 'Wash the dishes'
+          },
+          {
+            id: 1,
+            name: 'Make the bed'
+          }
+        ]
+      })
+    );
+
+    const getSpy = jest.spyOn(mockAxios, 'get');
+    // expect(getSpy).toBeCalled();
+
+  });
+});
+
