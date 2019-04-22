@@ -2,7 +2,7 @@
 import React from 'react';
 
 /** Enzyme/Jest section imports **/
-import {mount, shallow} from 'enzyme';
+import {shallow} from 'enzyme';
 
 /** Components section import **/
 import {LoginComponent} from '../LoginComponent';

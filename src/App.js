@@ -26,6 +26,7 @@ class App extends Component{
         <HeaderContainer/>
         <WorkspaceComponent/>
         <Footer/>
+
       </div>
     );
   }

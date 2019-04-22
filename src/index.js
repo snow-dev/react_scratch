@@ -22,6 +22,3 @@ ReactDOM.hydrate(
   </Root>,
   document.getElementById("root")
 );
-
-// const wrapper = document.getElementById('root');
-// wrapper ? ReactDOM.render(<StoreContainer/>, wrapper) : false;
