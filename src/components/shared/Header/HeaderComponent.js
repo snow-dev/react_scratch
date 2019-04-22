@@ -24,8 +24,6 @@ class HeaderComponent extends Component {
     autoBind(this);
   }
 
-
-
   render() {
     return (
       <div className="header">
