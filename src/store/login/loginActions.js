@@ -1,5 +1,8 @@
 
+// -> Import section.
 import axios from 'axios';
+
+// -> Action types section definition.
 export const SET_ACCESS_TOKEN = 'SET_ACCESS_TOKEN';
 
 /**

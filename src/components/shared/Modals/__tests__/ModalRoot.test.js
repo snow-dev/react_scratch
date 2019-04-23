@@ -49,3 +49,13 @@ describe('ModalRoot', () => {
     expect(wrapper.state('counter')).toBe(2);
   });
 });
+
+describe('directly invoking the incrementCounter method from component instance', () => {
+  it('should update the counter by 1 when invoked by default', () => {
+    const wrapper = shallow(<ModalRoot />);
+    const instance = wrapper.instance();
+    expect(wrapper.state('counter')).toBe(0);
+    instance.incrementCounter(true);
+    expect(wrapper.state('counter')).toBe(2);
+  });
+});

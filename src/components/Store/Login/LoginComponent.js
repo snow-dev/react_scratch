@@ -10,7 +10,7 @@ import {withLocalize} from 'react-localize-redux';
 /** Import component section **/
 
 /** Import helpers section **/
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 /** Import resources section **/
 
