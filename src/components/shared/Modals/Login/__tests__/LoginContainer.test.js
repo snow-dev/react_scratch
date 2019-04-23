@@ -3,8 +3,8 @@ import React from 'react';
 
 /** Enzyme/Jest section imports **/
 import {mount} from 'enzyme';
-import Root from '../../../../store/Root';
-import LoginContainer from '../LoginContainer';
+import Root from '../../../../../store/Root';
+import LoginContainer from '../LoginModalContainer';
 
 /** Components section import **/
 

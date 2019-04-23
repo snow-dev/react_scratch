@@ -8,6 +8,7 @@ import autoBind from 'react-autobind';
 import {withLocalize} from 'react-localize-redux';
 
 /** Import component section **/
+import Modal from 'react-responsive-modal';
 
 /** Import helpers section **/
 // import PropTypes from 'prop-types';
@@ -27,8 +28,12 @@ export class LoginComponent extends Component {
 
   render() {
     return (
-      <div className="login">
-        <h2>login </h2>
+      <div>
+        <Modal open={this.props.showModal} onClose={this.props.closeModal} center>
+          <div>
+            <h2>Login Modal</h2>
+          </div>
+        </Modal>
       </div>
     );
   }

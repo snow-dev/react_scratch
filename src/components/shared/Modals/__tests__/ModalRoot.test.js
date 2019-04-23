@@ -36,26 +36,17 @@ describe('ModalRoot', () => {
   /**
    * After each test we unmount component, to avoid garbage on the next tests.
    */
-  it('should update the count by 1 when invoked by default', () => {
-    expect(wrapper.state('counter')).toBe(0);
-    wrapper.find('button').simulate('click');
-    expect(wrapper.state('counter')).toBe(1);
-  });
+  it('should have a modal from type', () => {
 
-  it('should add two to the count when the "two" value es true', () => {
-    let wrapper = shallow(<ModalRoot two/>);
-    expect(wrapper.state('counter')).toBe(0);
-    wrapper.find('button').simulate('click');
-    expect(wrapper.state('counter')).toBe(2);
   });
 });
 
-describe('directly invoking the incrementCounter method from component instance', () => {
-  it('should update the counter by 1 when invoked by default', () => {
-    const wrapper = shallow(<ModalRoot />);
-    const instance = wrapper.instance();
-    expect(wrapper.state('counter')).toBe(0);
-    instance.incrementCounter(true);
-    expect(wrapper.state('counter')).toBe(2);
-  });
-});
+// describe('directly invoking the incrementCounter method from component instance', () => {
+//   it('should update the counter by 1 when invoked by default', () => {
+//     const wrapper = shallow(<ModalRoot />);
+//     const instance = wrapper.instance();
+//     expect(wrapper.state('counter')).toBe(0);
+//     instance.incrementCounter(true);
+//     expect(wrapper.state('counter')).toBe(2);
+//   });
+// });

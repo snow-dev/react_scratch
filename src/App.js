@@ -13,6 +13,7 @@ import Footer from './components/shared/Footer/Footer';
 
 /** Import styles section **/
 import './resources/styles/App.css';
+import ModalRoot from './components/shared/Modals/ModalRoot';
 
 class App extends Component{
   constructor(props){
@@ -26,7 +27,7 @@ class App extends Component{
         <HeaderContainer/>
         <WorkspaceComponent/>
         <Footer/>
-
+        <ModalRoot/>
       </div>
     );
   }

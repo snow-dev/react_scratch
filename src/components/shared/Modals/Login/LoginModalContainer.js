@@ -14,25 +14,34 @@ import {withLocalize} from 'react-localize-redux';
 /** Import component section **/
 
 /** Import helpers section **/
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import LoginComponent from './LoginComponent';
+import {closeModal} from '../../../../store/modals/modalActions';
 
 /** Import resources section **/
 
 /** Import UI components **/
 
 
-class LoginContainer extends Component {
+class LoginModalContainer extends Component {
   constructor(props) {
     super(props);
     autoBind(this);
   }
 
+  /**
+   * Close modal using callback passed as property
+   * @param event
+   */
+  closeModal(event){
+    event.preventDefault();
+    this.props.closeModal();
+  }
 
   render() {
-    return (
-      <LoginComponent/>
-    );
+    return <LoginComponent showModal  ={this.props.open}
+                           closeModal ={this.props.close}
+    />
   }
 }
 
@@ -40,7 +49,7 @@ class LoginContainer extends Component {
  * Validate properties that component needs.
  * @type {{}}
  */
-LoginContainer.propTypes = {};
+LoginModalContainer.propTypes = {};
 
 /**
  * Map some parameters from store to be injected to component.
@@ -48,7 +57,9 @@ LoginContainer.propTypes = {};
  * @returns {{}}
  */
 function mapStateToProps(store) {
-  return {};
+  return {
+    modal: store.modal,
+  };
 }
 
 /**
@@ -57,7 +68,11 @@ function mapStateToProps(store) {
  * @returns
  */
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    closeModal: () => {
+      dispatch(closeModal());
+    }
+  };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(LoginModalContainer);

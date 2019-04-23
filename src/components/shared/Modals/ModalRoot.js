@@ -15,26 +15,17 @@ import {withLocalize} from 'react-localize-redux';
 
 /** Import helpers section **/
 import PropTypes from 'prop-types';
+import LoginModalContainer from './Login/LoginModalContainer';
+import {closeModal} from '../../../store/modals/modalActions';
 
-/** Import resources section **/
-
-/** Import UI components **/
+/** Actions section import **/
+import * as modalActions from '../../../store/modals/modalActions'
 
 
 export class ModalRoot extends Component {
   constructor(props) {
     super(props);
     autoBind(this);
-
-    this.state = {
-      counter: 0,
-    };
-  }
-
-  incrementCounter(two){
-    let counter;
-    counter = two ? this.state.counter + 2 : this.state.counter + 1;
-    this.setState({counter});
   }
 
   /**
@@ -50,9 +41,12 @@ export class ModalRoot extends Component {
   getModal(){
     let modalType = this.props.modal.get('modalType');
     switch (modalType) {
-      case modalType.LOGIN_MODAL_TYPE: {
+      case modalActions.LOGIN_MODAL_TYPE: {
         return (
-          <div>Hola</div>
+          <LoginModalContainer close={this.closeModal}
+                               open={this.props.modal.get('isVisible')}
+                               properties={this.props.modal.get('modalProps')}
+          />
         );
       }
 
@@ -64,14 +58,7 @@ export class ModalRoot extends Component {
 
 
   render() {
-    // return this.getModal();
-    const { two } = this.props;
-    return (
-      <div>
-        <h3>{this.state.counter}</h3>
-        <button onClick={() => this.incrementCounter(two)} >Increment</button>
-      </div>
-    )
+    return this.getModal();
   }
 }
 
@@ -87,7 +74,9 @@ ModalRoot.propTypes = {};
  * @returns {{}}
  */
 function mapStateToProps(store) {
-  return {};
+  return {
+    modal: store.modal
+  };
 }
 
 /**
@@ -96,7 +85,12 @@ function mapStateToProps(store) {
  * @returns
  */
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    closeModal: () => {
+      dispatch(closeModal());
+    }
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ModalRoot);
+

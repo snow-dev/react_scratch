@@ -16,6 +16,7 @@ import {withLocalize} from 'react-localize-redux';
 /** Import helpers section **/
 import PropTypes from 'prop-types';
 import HeaderComponent from './HeaderComponent';
+import {LOGIN_MODAL_TYPE, showModal} from '../../../store/modals/modalActions';
 
 /** Import resources section **/
 
@@ -26,6 +27,10 @@ class HeaderContainer extends Component {
   constructor(props) {
     super(props);
     autoBind(this);
+  }
+
+  componentDidMount() {
+    this.props.showModal(LOGIN_MODAL_TYPE);
   }
 
 
@@ -57,7 +62,11 @@ function mapStateToProps(store) {
  * @returns
  */
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    showModal: (modalType) => {
+      dispatch(showModal(modalType, null))
+    }
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderContainer);
