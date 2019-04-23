@@ -1,5 +1,5 @@
 
-// -> Import section.
+// -> Impor section.
 import axios from 'axios';
 
 // -> Action types section definition.

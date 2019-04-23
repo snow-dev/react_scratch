@@ -43,7 +43,7 @@ export class ModalRoot extends Component {
     switch (modalType) {
       case modalActions.LOGIN_MODAL_TYPE: {
         return (
-          <LoginModalContainer close={this.closeModal}
+          <LoginModalContainer onClose={this.closeModal}
                                open={this.props.modal.get('isVisible')}
                                properties={this.props.modal.get('modalProps')}
           />

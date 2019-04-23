@@ -1,0 +1,24 @@
+@import "variables";
+.customOverlay {
+  // -> Styles for overlay.
+  background: rgba(45, 38, 45, 0.7);
+}
+.customModal {
+  background: #b2dbbf;
+  max-width: 300px;
+  width: 100%;
+}
+
+.brand-primary-p {
+  font-weight: 600;
+  color: $brand-primary;
+  padding: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.register-success {
+  color: $brand-primary;
+}
+

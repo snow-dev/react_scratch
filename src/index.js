@@ -8,6 +8,7 @@ import React from 'react';
 import StoreContainer from './components/Store/StoreContainer';
 import App from './App';
 import Root from './store/Root';
+import {ModalRoot} from './components/shared/Modals/ModalRoot';
 
 /** Import helpers section **/
 

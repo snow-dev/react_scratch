@@ -11,7 +11,7 @@ import {withLocalize} from 'react-localize-redux';
 import Modal from 'react-responsive-modal';
 
 /** Import helpers section **/
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 /** Import resources section **/
 
@@ -25,15 +25,18 @@ export class LoginComponent extends Component {
     autoBind(this);
   }
 
+  close(){
+    this.props.onClose();
+  }
 
   render() {
     return (
-      <div>
-        <Modal open={this.props.showModal} onClose={this.props.closeModal} center>
-          <div>
-            <h2>Login Modal</h2>
-          </div>
+      <div className="login-modal">
+        <Modal open={this.props.open} onClose={this.props.onClose} center className="login-modal">
+          <h2>Login Modal</h2>
         </Modal>
+
+
       </div>
     );
   }
@@ -43,6 +46,7 @@ export class LoginComponent extends Component {
  * Validate properties that component needs.
  * @type {{}}
  */
-LoginComponent.propTypes = {};
+LoginComponent.propTypes = {
+};
 
 export default withLocalize(LoginComponent);

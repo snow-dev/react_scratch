@@ -12,6 +12,7 @@ describe('ModalRoot', () => {
   let wrapper;
 
   let getModal = jest.fn();
+
   let modal = fromJS({
     modalType: 'LOGIN_MODAL_TYPE'
   });

@@ -29,18 +29,9 @@ class LoginModalContainer extends Component {
     autoBind(this);
   }
 
-  /**
-   * Close modal using callback passed as property
-   * @param event
-   */
-  closeModal(event){
-    event.preventDefault();
-    this.props.closeModal();
-  }
-
   render() {
-    return <LoginComponent showModal  ={this.props.open}
-                           closeModal ={this.props.close}
+    return <LoginComponent open  ={this.props.open}
+                           onClose ={this.props.onClose}
     />
   }
 }
@@ -61,6 +52,8 @@ function mapStateToProps(store) {
     modal: store.modal,
   };
 }
+
+
 
 /**
  * Map some actions to be injected as props.
