@@ -1,14 +1,12 @@
 
 
 import * as loginActions from '../loginActions';
-import configureStore from 'redux-mock-store';
 
+import configureStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
 import mockAxios from 'axios';
 
-
-const mockStore = configureStore();
-const store = mockStore();
-
+jest.mock('../../../store/rootReducer');
 
 describe('Login actions', () => {
   it('should has correct type', () => {
@@ -21,7 +19,6 @@ describe('Login actions', () => {
     expect(action.accessToken).toEqual('some.safe.token');
   });
 });
-
 
 describe('Async login function execution', () => {
   beforeEach(() => {
@@ -41,27 +38,15 @@ describe('Async login function execution', () => {
   });
 });
 
-describe('', () => {
-  it('should fetch data from unsplash', () => {
+describe('executeLogin actions', () => {
 
-    mockAxios.get.mockImplementationOnce(() =>
-      Promise.resolve({
-        data: [
-          {
-            id: 0,
-            name: 'Wash the dishes'
-          },
-          {
-            id: 1,
-            name: 'Make the bed'
-          }
-        ]
-      })
-    );
+  it('get user access token after successfully login', async () => {
+    const store = mockStore();
+    const middleware = [thunk];
+    const mockStore = configureStore(middleware);
 
-    const getSpy = jest.spyOn(mockAxios, 'get');
-    // expect(getSpy).toBeCalled();
+    const mockData = {
 
+    }
   });
 });
-

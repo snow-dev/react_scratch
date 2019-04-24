@@ -34,6 +34,29 @@ export class LoginComponent extends Component {
       <div className="login-modal">
         <Modal open={this.props.open} onClose={this.props.onClose} center className="login-modal">
           <h2>Login Modal</h2>
+
+          <form className="login-form" onSubmit={this.props.executeLogin}>
+            <input type="text"
+                   id="username"
+                   name="username"
+                   value={this.props.username}
+                   onChange={this.props.handleChange}
+                   placeholder="Username"
+            />
+            <br/>
+            <br/>
+            <input type="password"
+                   id="password"
+                   name="password"
+                   value={this.props.password}
+                   onChange={this.props.handleChange}
+                   placeholder="Password"
+            />
+
+            <br/>
+            <br/>
+            <button type="submit" className="submit">Log In</button>
+          </form>
         </Modal>
 
 

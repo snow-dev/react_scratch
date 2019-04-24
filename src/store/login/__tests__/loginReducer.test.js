@@ -26,3 +26,4 @@ describe('case: SET_ACCCESS_TOKEN', () => {
 
   expect(loginReducer(undefined, action)).toEqual(expectedState);
 });
+
